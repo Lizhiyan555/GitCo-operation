@@ -1,0 +1,88 @@
+想法1-项目概述：赛博世界身份生成器
+目标：
+创建一个Python应用程序，通过识别人脸特征，生成一个人的赛博世界形态和身份。用户可以上传照片，程序将生成一个独特的赛博形象。
+
+功能：
+人脸识别：
+使用计算机视觉技术识别人脸特征。
+提取关键特征用于生成赛博形象。
+
+赛博形象生成：
+基于人脸特征生成赛博风格的艺术形象。
+使用生成算法和风格迁移技术。
+
+身份生成：
+为生成的赛博形象创建一个虚构的身份，包括名字、职业、背景故事等。
+结果展示和保存：
+
+显示生成的赛博形象和身份信息。
+允许用户保存结果。
+
+工具和库：
+**OpenCV：**用于人脸检测和特征提取。
+**dlib 或 face_recognition：**用于高级人脸特征识别。
+**Pillow (PIL)：**用于图像处理。
+**StyleGAN 或 DeepArt API：**用于生成赛博风格的图像。
+**随机生成库：**用于生成身份信息。
+
+Idea 1 - Project Overview: Cyber World Identity Generator
+Objective:
+Create a Python application that generates a person's cyber-world persona and identity by recognizing facial features. Users can upload a photo, and the program will generate a unique cyber image.
+
+Features:
+Facial Recognition:
+
+Use computer vision techniques to recognize facial features.
+Extract key features for generating the cyber persona.
+Cyber Persona Generation:
+
+Generate a cyber-style artistic image based on facial features.
+Use generative algorithms and style transfer techniques.
+Identity Generation:
+
+Create a fictional identity for the generated cyber persona, including name, profession, and background story.
+Result Display and Save:
+
+Display the generated cyber persona and identity information.
+Allow users to save the results.
+Tools and Libraries:
+OpenCV: For face detection and feature extraction.
+dlib or face_recognition: For advanced facial feature recognition.
+Pillow (PIL): For image processing.
+StyleGAN or DeepArt API: For generating cyber-style images.
+Random generation library: For generating identity information.
+
+延展：赛博“修道”小程序
+获得赛博身份之后，用户通过完成每日赛博“修道”的任务奖励一些“缘气”，积累到一定“缘气”之后，可以捐赠到一些公益项目，类似于微信小程序里的小红花计划
+
+获得“缘气”的途径：
+1. 敲“电子木鱼”。敲满100下获得10个“缘气”
+2. 每日冥想。听完100s冥想语音可以获得10个"缘气"
+3. 盘“电子手串”。盘完100下获得10个“缘气”
+4. 点击右上角的“更多缘”，翻转日签和写随记也可以获得缘气
+5. 做完上面的每日任务后，第二天还可以获得额外的缘气奖励
+
+捐赠缘气：
+1. 点击项目名称，就可以看到项目的详细介绍啦，包括项目图片、最新进展、许愿墙啦
+2. 点击“立即守护”，可以自由选择捐赠多少“缘气”以及显示在许愿墙上的祝福语
+3. 捐赠之后会出现一张捐赠凭证和电子纪念徽章，会保存在你的赛博身份证里。
+
+Extension: Cyber ​​"cultivation" applet
+After obtaining the Cyber ​​identity, users can be rewarded with some "fate" by completing the daily Cyber ​​"cultivation" tasks. After accumulating a certain amount of "fate", they can donate to some public welfare projects, similar to the Little Red Flower Plan in the WeChat applet
+
+Ways to obtain "fate":
+
+1. Knock the "electronic wooden fish". Knock 100 times to get 10 "fate"
+
+2. Daily meditation. Listen to the 100s meditation voice to get 10 "fate"
+
+3. Play the "electronic bracelet". After 100 turns, you will get 10 "Yuan Qi"
+4. Click "More Yuan" in the upper right corner, and you can also get Yuan Qi by flipping the daily sign and writing notes
+5. After completing the above daily tasks, you can get additional Yuan Qi rewards the next day
+
+Donate Yuan Qi:
+1. Click the project name to see a detailed introduction of the project, including project pictures, latest progress, and wishing wall
+2. Click "Protect Now" to freely choose how much "Yuan Qi" to donate and the blessings displayed on the wishing wall
+3. After the donation, a donation certificate and an electronic commemorative badge will appear, which will be saved in your Cyber ​​ID card.
+
+
