@@ -1,3 +1,37 @@
+Project Proposal: City Graffiti Tour Recording and Feedback System
+	1. Introduction
+		In this city tour project, we add a graffiti-themed recording and feedback system. Users can upload a few favorite photos taken at different graffiti spots, creating a unique electronic souvenir. The output includes a digital postcard created by merging the images and an audio file.
+
+	2. Aim
+	-Create Interactive Experience: Encourage users to upload their graffiti tour photos and receive personalized feedback.
+	-Generate Personalized Souvenir: Users upload graffiti photos, which the system blends into one combined image (digital postcard) and generates an audio file that reflects the combined images.
+
+	3. Functional Modules
+	-Photo Upload Module
+		Users take photos at different graffiti spots.
+		Upload photos to the website system.
+	-Postcard Generation Module
+		The system automatically merges the uploaded photos to create a single image (postcard) that includes features from various graffiti spots.
+	-Audio Generation Module
+		The system uses the uploaded photos to create a unique audio file (music).
+		The audio reflects the graffiti style and city atmosphere captured in the photos.
+	-Souvenir Download and Sharing Module
+		After users complete uploads, the system sends the combined postcard and audio file to their email or provides a download option.
+		This creates a complete feedback process.
+
+4. Implementation Plan
+	-Tools
+		Use Streamlit to build the interface, OpenCV/PIL for image processing, and PyAudio for audio generation.
+	-Development Stage
+		1.Photo Upload Module: Create the user interface with Streamlit to support multiple photo uploads, display, and confirmation.
+		2.Postcard Generation: Use image generation AI to blend multiple images into one. Start with simple merging, then gradually add artistic effects.
+		3.Audio Generation Module: Convert images to text, combine the texts, and transform this into an audio file that matches the photos.
+		4.Souvenir Download and Sharing: Provide a download button for users to get their files and add an option to send files via email (optional).
+	-Deployment
+		1.Platform Deployment: Deploy the project to a suitable cloud platform (e.g., Streamlit Cloud or Heroku).
+		2.Data and File Management: Set up file storage and caching to ensure system performance and efficient storage use.
+	
+
 项目提案：城市涂鸦漫游记录与反馈机制
 一、Intro
 在城市漫游项目中，引入涂鸦主题的城市漫游记录反馈机制。用户通过上传自己最喜欢的几张在涂鸦节点打卡的照片，生成独特的电子souvenir。Output结果包涵图片融合生成的明信片和音频。
@@ -12,10 +46,10 @@
 	◦	上传至网站系统。
 	2	照片融合明信片生成模块
 	◦	系统自动将上传的照片融合，生成一张包含不同节点特色的image（即明信片）。
-	1	音频生成模块
+	3	音频生成模块
 	◦	系统根据用户上传照片生成的图像信息，生成一段特定音频（music）。
 	◦	音频内容与用户拍摄的涂鸦风格和城市氛围匹配。
-	2	电子纪念品发送模块
+	4	电子纪念品发送模块
 	◦	用户完成上传后，系统将融合生成的明信片和音频文件发送至用户邮箱或者直接供用户下载。
 	◦	形成完整的反馈机制
 
