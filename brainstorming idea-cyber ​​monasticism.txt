@@ -85,4 +85,60 @@ Donate Yuan Qi:
 2. Click "Protect Now" to freely choose how much "Yuan Qi" to donate and the blessings displayed on the wishing wall
 3. After the donation, a donation certificate and an electronic commemorative badge will appear, which will be saved in your Cyber ​​ID card.
 
+想法3-项目概述：Gio编程桌面小助手
+目标：
+Gio是一个很厉害的来自意大利的程序员，他很聪明，所以我们SD5914的所有人很想把携带在身边，随时为我们提供有趣想法和代码援助。
+所以我们的目的是创建一个Python应用程序，展示一个名为Gio的像素艺术角色，帮助用户解决与编程相关的问题，提供代码片段，并帮助调试代码错误。
+Gio将作为用户桌面上的友好编程助手！
 
+功能：
+Gio互动桌面编程小助手
+
+在桌面上显示一个像素艺术角色。
+动画化Gio以执行简单动作（例如，走动、挥手）。
+编程帮助：
+
+允许用户提出与编程相关的问题。
+提供代码片段和解释作为回应。
+代码调试：
+
+分析用户提供的代码以查找错误。
+提供修复问题的建议和解决方案。
+用户界面：
+
+创建一个简单的界面与Gio互动。
+以用户友好的方式显示响应和代码片段。
+工具和库：
+**Tkinter或PyQt：**用于创建GUI和显示Gio。
+**Pillow (PIL)：**用于处理像素艺术图形。
+**OpenAI GPT或类似API：**用于生成编程问题的响应。
+**Pylint或Pyflakes：**用于分析Python代码并识别错误。
+
+Idea 3 - Project Overview: Gio Programming Desktop Assistant
+Goal:
+Gio is a great programmer from Italy, he is very smart, so all of us at SD5914 would like to have him around to provide interesting ideas and coding assistance at any time.
+So our goal is to create a Python application that displays a pixel art character named Gio, helping users solve programming related problems, providing code snippets, and helping debug code errors.
+Gio will serve as a friendly programming assistant on the user's desktop!
+
+Functionality:
+Gio Interactive Desktop PROGRAMMING Assistant
+
+Display a pixel art character on the desktop.
+Animate Gio to perform simple actions (e.g., walk, wave).
+Programming Help:
+
+Allow users to ask programming related questions.
+Provide code snippets and explanations in response.
+Code Debugging:
+
+Analyze the code provided by the user to find errors.
+Provide suggestions and solutions to fix the problems.
+User Interface:
+
+Create a simple interface to interact with Gio.
+Display responses and code snippets in a user-friendly way.
+Tools and Libraries:
+**Tkinter or PyQt:**For creating GUI and displaying Gio.
+**Pillow (PIL):** For processing pixel art graphics.
+**OpenAI GPT or similar API:** For generating responses to programming questions.
+**Pylint or Pyflakes:** For analyzing Python code and identifying errors.
