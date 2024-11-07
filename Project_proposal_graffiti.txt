@@ -64,3 +64,134 @@ Project Proposal: City Graffiti Tour Recording and Feedback System
 	4	上线部署
 	◦	平台部署：将项目部署在适合的云平台（如 Streamlit Cloud 或 Heroku）。
 	◦	数据与文件管理：设置文件存储、缓存机制，确保系统性能和存储空间的有效利用。
+
+
+
+Proposal 1
+Project Name: Urban Graffiti Tour Recording & Feedback Mechanism
+Objective
+Develop a graffiti-themed urban tour recording and feedback system. Users upload three photos taken at graffiti spots around the city. These photos are then merged into one using Stable Diffusion, analyzed by AI for text generation, and an audio track is created based on the generated text. The final output displays the merged image along with a matching audio track for the user to download or receive via email.
+
+
+1. Project Structure and Tool Selection
+Primary Tools:
+- Streamlit: For building the user interface, allowing photo upload and display.
+- Stable Diffusion (diffusers library): For merging uploaded images into a single graffiti-styled image.
+- Image Recognition and Text Generation (e.g., CLIP or a pre-trained image-captioning model): For generating a description based on the merged image.
+- AudioLDM2Pipeline (from diffusers): To generate audio based on the generated description.
+- pydub (optional): For audio mixing and sound enhancement.
+- smtplib or SendGrid (optional): For sending digital souvenirs via email.
+Main Modules:
+1. User Photo Upload Module
+2. Image Fusion and Text Generation Module
+3. Audio Generation Module
+4. Digital Souvenir Download and Sending Module
+
+---
+5. Detailed Implementation of Each Module
+Module 1: User Photo Upload Module
+Purpose: Allow users to upload exactly three photos taken at different graffiti spots, then preview them.
+Steps:
+1. Use Streamlit to create an upload interface that supports multiple file uploads.
+2. Limit the upload count to exactly three images and display these for user confirmation.
+Example Code:
+import streamlit as st
+from PIL import Image
+
+Photo upload
+uploaded_files = st.file_uploader("Upload exactly 3 graffiti photos", accept_multiple_files=True, type=['jpg', 'jpeg', 'png'])
+
+if uploaded_files and len(uploaded_files) == 3:
+    st.write("Preview of uploaded images:")
+    images = [Image.open(file) for file in uploaded_files]for img in images:
+        st.image(img, caption="Uploaded Photo")
+else:
+    st.warning("Please upload exactly 3 images.")
+Module 2: Image Fusion and Text Generation Module
+Purpose: Merge the three uploaded images into one using Stable Diffusion, then generate a text description for this image.
+Steps:
+1. Image Fusion: Concatenate the three images using PIL, then pass them through Stable Diffusion for style fusion.
+2. Text Generation: Use an image-captioning model to generate a description for the merged image, which will be used as the prompt for audio generation.
+Example Code:
+from PIL import Image
+from diffusers import StableDiffusionPipeline
+import torch
+
+Merge images and create a graffiti-style imagedef merge_and_style_images(images, prompt="graffiti style, urban street art"):
+    widths, heights = zip(*(img.size for img in images))
+    total_width = sum(widths)
+    max_height = max(heights)
+    combined_image = Image.new('RGB', (total_width, max_height))
+    x_offset = 0for img in images:
+        combined_image.paste(img, (x_offset, 0))
+        x_offset += img.width
+Initialize Stable Diffusion for style transfer
+    pipeline = StableDiffusionPipeline.from_pretrained("CompVis/stable-diffusion-v1-4", torch_dtype=torch.float16)
+    pipeline = pipeline.to("cuda")
+    styled_image = pipeline(prompt=prompt, init_image=combined_image, strength=0.75, guidance_scale=7.5).images[0]
+    styled_image.save("styled_postcard.jpg")return styled_image
+styled_image = merge_and_style_images(images)
+
+Image captioning for generating a descriptive textfrom transformers import pipeline as hf_pipeline
+caption_generator = hf_pipeline("image-captioning")
+description = caption_generator(styled_image)[0]['caption']
+Module 3: Audio Generation Module
+Purpose: Generate an audio track based on the description generated from the merged image.
+Steps:
+1. Use the generated description text as input for AudioLDM2Pipeline to create graffiti-style audio reflecting the atmosphere.
+Example Code:
+from diffusers import AudioLDM2Pipeline
+import soundfile as sf
+
+Generate audio from descriptiondef generate_audio_from_text(description):
+    audio_pipeline = AudioLDM2Pipeline.from_pretrained("cvssp/audioldm2", torch_dtype=torch.float16)
+    audio_pipeline = audio_pipeline.to("cuda")
+    audio_array = audio_pipeline(prompt=description).audios[0]
+    sf.write("generated_audio.wav", audio_array, samplerate=16000)  Save audioreturn "generated_audio.wav"
+audio_file_path = generate_audio_from_text(description)
+Module 4: Digital Souvenir Download and Sending Module
+Purpose: Allow users to download or receive via email the final postcard and audio.
+Steps:
+1. Use Streamlit to create download buttons for both the merged image and audio.
+2. Optionally, send the files via email using smtplib or an email API such as SendGrid.
+Example Code:
+import streamlit as st
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.base import MIMEBase
+from email import encoders
+
+Download buttons for postcard and audio
+st.download_button("Download your postcard", data=open("styled_postcard.jpg", "rb").read(), file_name="postcard.jpg")
+st.download_button("Download your audio", data=open(audio_file_path, "rb").read(), file_name="audio.wav")
+
+Email sending function (optional)def send_email_with_attachments(email_address, image_path, audio_path):
+    msg = MIMEMultipart()
+    msg['From'] = 'your_email@example.com'
+    msg['To'] = email_address
+    msg['Subject'] = "Your Souvenir from the Graffiti Tour"Attach imagewith open(image_path, "rb") as img_file:
+        img = MIMEBase('application', 'octet-stream')
+        img.set_payload(img_file.read())
+        encoders.encode_base64(img)
+        img.add_header('Content-Disposition', f'attachment; filename="postcard.jpg"')
+        msg.attach(img)
+    Attach audiowith open(audio_path, "rb") as audio_file:
+        audio = MIMEBase('application', 'octet-stream')
+        audio.set_payload(audio_file.read())
+        encoders.encode_base64(audio)
+        audio.add_header('Content-Disposition', f'attachment; filename="audio.wav"')
+        msg.attach(audio)
+Send emailwith smtplib.SMTP('smtp.example.com', 587) as server:
+        server.login('your_email@example.com', 'password')
+        server.sendmail(msg['From'], msg['To'], msg.as_string())
+
+---
+3. Deployment Plan
+Deployment Steps
+1. Prepare Project Environment: Set up a requirements.txt file with all dependencies.
+2. Choose Deployment Platform:
+  - Streamlit Cloud: For quickly deploying Streamlit apps.
+  - Heroku or AWS EC2: For applications that require more resources.
+3. File Storage:
+  - Local storage for temporary files during development.
+  - Cloud storage (like AWS S3) for production, particularly if you anticipate high usage.
