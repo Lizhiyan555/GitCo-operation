@@ -1,0 +1,9 @@
+streamlit
+Pillow
+opencv-python
+diffusers
+transformers
+torch
+pydub
+soundfile
+sendgrid
