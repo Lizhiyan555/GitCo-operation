@@ -1,0 +1,49 @@
+/* 背景颜色 */
+body {
+    background-color: #ffef73; /* 明亮的黄色背景色 */
+    font-family: 'Montserrat', sans-serif; /* 使用类似的无衬线字体 */
+}
+
+/* 标题风格 */
+h1, h2, h3, h4, h5, h6 {
+    color: #ff33ff; /* 粉色字体 */
+    font-weight: bold;
+}
+
+/* 按钮风格 */
+#generate-button {
+    background-color: #ff33ff; /* 按钮背景色 */
+    color: #ffffff; /* 按钮文字颜色 */
+    border-radius: 12px; /* 圆角效果 */
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#generate-button:hover {
+    background-color: #c700c7; /* 鼠标悬停变暗 */
+}
+
+/* 图像上传区域 */
+.upload-image-area {
+    background-color: #ffef73; /* 与背景相同的颜色 */
+    border: 2px dashed #ff33ff;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* 文本框样式 */
+.textbox {
+    border: 2px solid #ff33ff;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+    color: #333333;
+}
+
+/* 音频播放组件 */
+.audio-player {
+    border: none;
+    background-color: transparent;
+}
