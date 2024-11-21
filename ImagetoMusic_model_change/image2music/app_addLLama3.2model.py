@@ -10,8 +10,8 @@ blip_processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning
 blip_model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-base").to("cpu")
 music_processor = AutoProcessor.from_pretrained(r"facebook/musicgen-small")
 music_model = MusicgenForConditionalGeneration.from_pretrained(r"facebook/musicgen-small")
-llama_tokenizer = LlamaTokenizer.from_pretrained("LLaMA-3.2-vision")
-llama_model = LlamaForCausalLM.from_pretrained("LLaMA-3.2-vision")
+llama_tokenizer = LlamaTokenizer.from_pretrained("meta-llama/Llama-3.2-1B")
+llama_model = LlamaForCausalLM.from_pretrained("meta-llama/Llama-3.2-1B")
 
 # Music Generate Function
 def musicgen(img, text):
