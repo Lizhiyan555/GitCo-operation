@@ -30,7 +30,7 @@ blip_processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning
 blip_model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-base").to(device)
 music_processor = AutoProcessor.from_pretrained(r"facebook/musicgen-small")
 music_model = MusicgenForConditionalGeneration.from_pretrained(r"facebook/musicgen-small").to(device)
-llm = ChatOllama(model='llama3.2')
+llm = ChatOllama(model='llama3.2', format='json')
 # Music generation function
 
 def musicgen(img, text):
