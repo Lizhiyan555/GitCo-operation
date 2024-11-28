@@ -109,7 +109,7 @@ body {
 """
 
 # Create Gradio interface
-with gr.Blocks(gr.themes.Soft(), language='en') as demo:
+with gr.Blocks(gr.themes.Soft()) as demo:
     with gr.Column():
         with gr.Row():
             with gr.Column(scale=4):
