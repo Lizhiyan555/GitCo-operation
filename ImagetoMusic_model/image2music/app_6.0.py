@@ -86,7 +86,7 @@ def musicgen(img, text):
 # Memphis Style CSS with geometric shapes and background image
 css = """
 body {
-    background-image: url('https://cdn.discordapp.com/attachments/1212332093456257036/1309096379737440286/backdrop.png?ex=67405682&is=673f0502&hm=e4e48ee7287247d1b64758955f445094c6a9d56e3f1a8a937a0c6cc5703366ef&');
+    background-image: url('https://ice.frostsky.com/2024/11/28/670fcd3fb527f1330faf53b5ab45eea8.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -117,10 +117,10 @@ with gr.Blocks(gr.themes.Soft()) as demo:
                 # Use URL links for the example images
                 gr.Examples(
                     [
-                        'https://cdn.discordapp.com/attachments/1212332093456257036/1309103257599082526/image.png?ex=67405cea&is=673f0b6a&hm=28a21f3bd60fa41aac95da8109c019f9e22ee7a5d5c724e005b8c39c6aa0f206&',  # 图片1的URL
-                        'https://cdn.discordapp.com/attachments/1212332093456257036/1309101622802255965/30e6ec9911132e5d.jpeg?ex=67405b64&is=673f09e4&hm=32c585bc50c641baf657305818c383200a17e99a4f71492bb4ab35cfd588d828&',  # 图片2的URL
-                        'https://cdn.discordapp.com/attachments/1212332093456257036/1309101955179614288/image.png?ex=67405bb4&is=673f0a34&hm=99ddcaeed5cdbee72c71b7f23459d0fabddc10b577b305d350d0f38a23384d8d&',  # 图片3的URL
-                        'https://cdn.discordapp.com/attachments/1212332093456257036/1309102165263908864/image.png?ex=67405be6&is=673f0a66&hm=f241f21367fc77ab2fd47812ec1d1e6435f8f266282cf87b798123c711fc8d31&'   # 图片4的URL
+                        'https://ice.frostsky.com/2024/11/28/f68692ac3cba0d305fa2132935c9890a.jpeg',  # 图片1的URL
+                        'https://ice.frostsky.com/2024/11/28/5b4c6ff21ef07942755ffd4ae45699a5.jpeg',  # 图片2的URL
+                        'https://ice.frostsky.com/2024/11/28/7b9f6fa3c897d198e1d62b1b868f10f2.png',  # 图片3的URL
+                        'https://ice.frostsky.com/2024/11/28/b9075c9fd1ecd0e7decb729b4115233f.jpeg'   # 图片4的URL
                     ],
                     label="Sample Images", inputs=[input_image]
                 )

@@ -4,3 +4,4 @@ accelerate
 moviepy
 spaces
 sentencepiece
+langchain_ollama
