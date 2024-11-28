@@ -8,6 +8,7 @@ The reason why we choose the medium of "music" is because we believe that music,
 To sum up, Mood Player is not only a picture-to-music generator but also a philosophical exploration of individual emotions, artistic expression and self-realization. By combining emotion with music creation, it offers an opportunity for everyone to constantly discover themselves in their daily lives, so run our program and experience it!
 
 # Video Presentation Link
+https://youtu.be/WwYUdnkSDiQ
 
 # Installation
 1. Clone the repo
