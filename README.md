@@ -1,4 +1,4 @@
-# Artist Statement
+# About The Project
 Our team designed a program called Mood Player, which can combine your current mood and generate your unique BGM in real time! You can even take a selfie with your friends and generate your own BGM!
 
 The theme we want to convey is: that anytime, anywhere, we are always the protagonists of our lives. Each person's emotional experience is unique and flows with changes in time, environment, and even body. Therefore, Mood Player is not only a tool to express emotions, but also an artistic presentation of an individual's "existence" state. In phenomenological philosophy, Heidegger thought that emotion is regarded as a "direct way of being" that is closely linked to the subject's experience. In this way, the individual's present existence is fully manifested.
