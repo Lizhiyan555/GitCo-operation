@@ -28,7 +28,7 @@ https://youtu.be/WwYUdnkSDiQ
 
 
 # Acknowledgement
-<a href="https://github.com/venetanji/pfad">
+<a href="https://github.com/venetanji">
   <img src="https://ice.frostsky.com/2024/11/28/50a245f99d7c532eeef622912774dabb.png" alt="contrib.rocks image" />
 </a>
 
